@@ -54,25 +54,25 @@ custom styles.
 
 ## Passo a Passo de como foi feito, e todos os itens necessarios para rodar o projeto
 
-1- Estar com o Wamp funcionando.
-2- Verificar se o módulo rewrite_module e as extensões mbstring e intl estão rodando. 
-3- Verificar se o composer está ali (digitando composer no terminal). Instalar caso não esteja.
-4- Criar uma pasta no C:\wamp64\www (nome usado no projeto: desafiocakeluiza).
-5- Abrir a pasta criada anteriormente no VS Code, abrir o terminal e rodar o comando: composer create-project --prefer-dist cakephp/app [nome] (nome usado: desafiocakeluiza).
-6- Criar um banco de dados (nome usado: bd_desafcakeluiza)
-7- Abrir o arquivo app_local.php no VS Code, e configurar com o banco, informações mais ou menos na linha 47 (username, password, database).
-8- Criar as tabelas onde o banco foi criado. Tabelas utilizadas:
+- 1- Estar com o Wamp funcionando.
+- 2- Verificar se o módulo rewrite_module e as extensões mbstring e intl estão rodando. 
+- 3- Verificar se o composer está ali (digitando composer no terminal). Instalar caso não esteja.
+- 4- Criar uma pasta no C:\wamp64\www (nome usado no projeto: desafiocakeluiza).
+- 5- Abrir a pasta criada anteriormente no VS Code, abrir o terminal e rodar o comando: composer create-project --prefer-dist cakephp/app [nome] (nome usado: desafiocakeluiza).
+- 6- Criar um banco de dados (nome usado: bd_desafcakeluiza)
+- 7- Abrir o arquivo app_local.php no VS Code, e configurar com o banco, informações mais ou menos na linha 47 (username, password, database).
+- 8- Criar as tabelas onde o banco foi criado. Tabelas utilizadas:
                                                                usuarios (id, nome, email)
                                                                consoles (id, nome, lancamento, preco)
                                                                jogos (id, nome, lancamento, plataforma, preco, consoles_id) 
                                                                * os id serão auto increment e not null
                                                                * não é necessario fazer algo a mais no 'consoles_id' da tabela jogos, pois o cake reconhece que ela é uma foreign key ao nomear com o _id
-9- Entrar no terminal e rodar os comandos no terminal: 
+- 9- Entrar no terminal e rodar os comandos no terminal: 
                                                    bin\cake bake all usuarios
                                                    bin\cake bake all consoles
                                                    bin\cake bake all jogos
                                                    * esses comandos fazem com que tudo feito nessas tabelas no banco seja criado também no projeto.
-10- Para abrir o projeto no navegador, rodar o comando no terminal:
+- 10- Para abrir o projeto no navegador, rodar o comando no terminal:
                                                                    bin\cake server
                                                                    * depois disso pode ser aberto como: http://localhost:8765
                                                                                                         http://localhost:8765/usuarios
